@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "principio_pbds",
+  "info": {
+    "singularName": "principio-pbd",
+    "pluralName": "principio-pbds",
+    "displayName": "principioPBD"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "patterns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pattern.pattern",
+      "mappedBy": "principio_pbds"
+    }
+  }
+}

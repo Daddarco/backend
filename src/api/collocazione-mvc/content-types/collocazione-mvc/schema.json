@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collocazione_mvcs",
+  "info": {
+    "singularName": "collocazione-mvc",
+    "pluralName": "collocazione-mvcs",
+    "displayName": "collocazioneMVC",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "patterns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pattern.pattern",
+      "mappedBy": "collocazione_mvcs"
+    }
+  }
+}

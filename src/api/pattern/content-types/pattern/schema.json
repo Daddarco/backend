@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patterns",
+  "info": {
+    "singularName": "pattern",
+    "pluralName": "patterns",
+    "displayName": "pattern",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "descrizione": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "contesto": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "strategias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::strategia.strategia",
+      "inversedBy": "patterns"
+    },
+    "collocazione_mvcs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collocazione-mvc.collocazione-mvc",
+      "inversedBy": "patterns"
+    },
+    "fase_isos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fase-iso.fase-iso",
+      "inversedBy": "patterns"
+    },
+    "articolo_gdprs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::articolo-gdpr.articolo-gdpr",
+      "inversedBy": "patterns"
+    },
+    "principio_pbds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::principio-pbd.principio-pbd",
+      "inversedBy": "patterns"
+    },
+    "categoria_owasps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-owasp.categoria-owasp",
+      "inversedBy": "patterns"
+    },
+    "cwe_associata_a_categoria_owasps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cwe-associata-a-categoria-owasp.cwe-associata-a-categoria-owasp",
+      "inversedBy": "patterns"
+    },
+    "esempio": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

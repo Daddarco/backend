@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cwe_associata_a_categoria_owasps",
+  "info": {
+    "singularName": "cwe-associata-a-categoria-owasp",
+    "pluralName": "cwe-associata-a-categoria-owasps",
+    "displayName": "CWEAssociataACategoriaOWASP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "patterns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pattern.pattern",
+      "mappedBy": "cwe_associata_a_categoria_owasps"
+    }
+  }
+}

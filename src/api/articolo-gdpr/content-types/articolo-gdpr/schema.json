@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articolo_gdprs",
+  "info": {
+    "singularName": "articolo-gdpr",
+    "pluralName": "articolo-gdprs",
+    "displayName": "articoloGDPR",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "patterns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pattern.pattern",
+      "mappedBy": "articolo_gdprs"
+    }
+  }
+}

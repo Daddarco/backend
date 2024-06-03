@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fase_isos",
+  "info": {
+    "singularName": "fase-iso",
+    "pluralName": "fase-isos",
+    "displayName": "faseISO",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "patterns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pattern.pattern",
+      "mappedBy": "fase_isos"
+    }
+  }
+}
